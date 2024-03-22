@@ -7,15 +7,15 @@ name = "mergekit"
 description = "Tools for merging pre-trained large language models"
 readme = "README.md"
 license = { text = "LGPL-3.0-or-later" }
-version = "0.0.4"
+version = "0.0.4.1"
 authors = [{ name = "Charles Goddard", email = "chargoddard@gmail.com" }]
 dependencies = [
     "torch>=2.0.0",
-    "tqdm==4.66.1",
+    "tqdm==4.66.2",
     "click==8.1.7",
-    "safetensors==0.4.1",
-    "accelerate==0.25.0",
-    "pydantic==2.5.3",
+    "safetensors~=0.4.2",
+    "accelerate~=0.27.2",
+    "pydantic==2.6.2",
     "immutables==0.20",
     "transformers",
     "huggingface_hub",
@@ -26,8 +26,8 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["black~=23.11.0", "isort~=5.12.0", "pre-commit~=3.5.0"]
-test = ["pytest~=7.4.4"]
+dev = ["black~=24.2.0", "isort~=5.13.2", "pre-commit~=3.6.2"]
+test = ["pytest~=8.0.1"]
 
 [project.urls]
 repository = "https://github.com/cg123/mergekit"
@@ -47,6 +47,8 @@ packages = [
     "mergekit.io",
     "mergekit.merge_methods",
     "mergekit.scripts",
+    "mergekit._data",
+    "mergekit._data.architectures",
 ]
 
 [tool.isort]
